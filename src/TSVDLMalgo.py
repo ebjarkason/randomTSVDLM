@@ -199,7 +199,7 @@ def LMinv(m0, resfunc, TSVDspecials, kmax, e2, mu0, ubounds, lbounds, lamredfac,
             if (ftemp < fold) :
                 
                 # Update best incon file when objective function is improved:
-                shutil.copy ('incFromNat.incon', 'incbest.incon')
+                shutil.copy (inconName, 'incbest.incon')
                 
                 k = k+1
                 sp.save('LMiter.npy', k)
