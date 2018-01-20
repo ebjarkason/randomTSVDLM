@@ -71,7 +71,7 @@ def TSVDrandEVENview(A, AT, ktrunc, ell, qpow=0):
 # adjoint and direct solves).
 # ----------------------------------------------------------------------
 # INPUTS:
-# inputs = [], 
+# inputs = [Mat, B], 
 # where
 # Mat: (Nr by Nc) LinearOperator
 # B: (Nc by s) matrix
