@@ -20,7 +20,7 @@ from scipy.sparse.linalg import LinearOperator, aslinearoperator
 # but the below algorithm should be adjusted for that purpose)
 # ktrunc: number of retained singular values
 # ell: (integer) amount of oversampling
-# pow: number of optional power iterations. Default (pow=0) is using a 2-view approach.
+# qpow: number of optional power iterations. Default (qpow=0) is using a 2-view approach.
 # The number of matrix views are 2*(1+qpow).
 # ----------------------------------------------------------------------
 # RETURNS: approximate rank-ktrunc TSVD, Uk*diag(sk)*Vhk, of A:
@@ -336,7 +336,7 @@ def TSVDlanczosSVCUT(A, ktrunc, nmax, stol, SVcut, ktruncmax) :
 # ktrunc: number of retained singular values
 # ell: (integer) amount of oversampling
 # OmegaSub: (Nc by NSub) matrix used to form part of the sampling matrix for the range finder (NSub <= ktrunc)
-# pow: number of optional power iterations. Default (pow=0) is using a 2-view approach.
+# qpow: number of optional power iterations. Default (qpow=0) is using a 2-view approach.
 # The number of matrix views are 2*(1+qpow).
 # ----------------------------------------------------------------------
 # RETURNS: approximate rank-ktrunc TSVD, Uk*diag(sk)*Vhk, of A:
