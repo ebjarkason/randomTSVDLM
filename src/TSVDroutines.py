@@ -9,13 +9,13 @@ from scipy.sparse.linalg import LinearOperator, aslinearoperator
 
     
 # TSVDrandEVENview: 
-# A basic randomized algorithm for estimating a TSVD, see Halko et al. (2011),
+# A basic randomized algorithm for estimating a TSVD of a matrix A, see Halko et al. (2011),
 # "Finding structure with randomness: Proba11bilistic algorithms for 
 # constructing approximate matrix decompositions".    
 # ----------------------------------------------------------------------
 # INPUTS:
-# A: (Nr by Nc) LinearOperator (for A*matrix and AT*matrix) 
-# AT: (Nc by Nr) LinearOperator (for AT*matrix and A*matrix) or matrix
+# A: (Nr by Nc) LinearOperator (for A*matrix) or matrix
+# AT: (Nc by Nr) LinearOperator (for AT*matrix) or matrix
 # (A and AT can also be specified as a dense/sparse matrix (for test purposes),
 # but the below algorithm should be adjusted for that purpose)
 # ktrunc: number of retained singular values
@@ -84,12 +84,12 @@ def SomeMatTimesSomeMat(inputs):
     return Mat.matmat(B)
     
 # TSVDrand1view: 
-# A randomized 1-view method for estimating a TSVD, see Tropp et al. (2016),
+# A randomized 1-view method for estimating a TSVD  of a matrix A, see Tropp et al. (2016),
 # "Randomized single-view algorithms for low-rank matrix approximation".  
 # ----------------------------------------------------------------------
 # INPUTS:
-# A: (Nr by Nc) LinearOperator (for A*matrix and AT*matrix) 
-# AT: (Nc by Nr) LinearOperator (for AT*matrix and A*matrix) or matrix
+# A: (Nr by Nc) LinearOperator (for A*matrix) or matrix
+# AT: (Nc by Nr) LinearOperator (for AT*matrix) or matrix
 # (A and AT can also be specified as a dense/sparse matrix (for test purposes),
 # but the below algorithm should be adjusted for that purpose)
 # ktrunc: number of retained singular values
@@ -325,12 +325,12 @@ def TSVDlanczosSVCUT(A, ktrunc, nmax, stol, SVcut, ktruncmax) :
     
       
 # TSVDrandEVENviewSubReuse: 
-# A randomized algorithm for estimating a TSVD applying subspace re-use
+# A randomized algorithm for estimating a TSVD  of a matrix A, applying subspace re-use
 # to generate the randomized sampling matrix
 # ----------------------------------------------------------------------
 # INPUTS:
-# A: (Nr by Nc) LinearOperator (for A*matrix and AT*matrix) 
-# AT: (Nc by Nr) LinearOperator (for AT*matrix and A*matrix) or matrix
+# A: (Nr by Nc) LinearOperator (for A*matrix) or matrix
+# AT: (Nc by Nr) LinearOperator (for AT*matrix) or matrix
 # (A and AT can also be specified as a dense/sparse matrix (for test purposes),
 # but the below algorithm should be adjusted for that purpose)
 # ktrunc: number of retained singular values
@@ -385,12 +385,12 @@ def TSVDrandEVENviewSubReuse(A, AT, ktrunc, ell, OmegaSub, qpow=0):
     return sk, Uk, Vhk
     
 # TSVDrand1viewSubReuse: 
-# A randomized 1-view algorithm for estimating a TSVD applying subspace re-use
+# A randomized 1-view algorithm for estimating a TSVD of a matrix A, applying subspace re-use
 # to generate the randomized sampling matrix  
 # ----------------------------------------------------------------------
 # INPUTS:
-# A: (Nr by Nc) LinearOperator (for A*matrix and AT*matrix) 
-# AT: (Nc by Nr) LinearOperator (for AT*matrix and A*matrix) or matrix
+# A: (Nr by Nc) LinearOperator (for A*matrix) or matrix
+# AT: (Nc by Nr) LinearOperator (for AT*matrix) or matrix
 # (A and AT can also be specified as a dense/sparse matrix (for test purposes),
 # but the below algorithm should be adjusted for that purpose)
 # ktrunc: number of retained singular values
@@ -403,7 +403,7 @@ def TSVDrandEVENviewSubReuse(A, AT, ktrunc, ell, OmegaSub, qpow=0):
 # sk: appromximate top ktrunc singular values of A
 # Uk: (Nr by ktrunc) matrix, where the ith column approximates the ith left singular vector
 # Vhk: (ktrunc by Nc) matrix, where the ith row approximates the ith right singular vector
-# ----------------------------------------------------------------------    
+# ----------------------------------------------------------------------   
 def TSVDrand1viewSubReuse(A, AT, ktrunc, ell1, ell2, OmegaSub, PsiSub):
     A = aslinearoperator(A)
     AT = aslinearoperator(AT)
