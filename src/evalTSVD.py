@@ -226,7 +226,6 @@ def svdfuncWithSubReuse(parameters, ktrunc, TSVDspecials, Nm, Nd, UkPrev, VTkPre
         ptrunc = TSVDspecials[1]  
         qpow = TSVDspecials[2]  
         print 'Using '+str(2 + (2*qpow))+'-VIEW method', 'WITH SUBSPACE RE-USE'
-        sk, Uk, VTk = TSVDrandEVENview(Amult, ATmult, ktrunc, ptrunc, qpow=qpow)
         if Nd >= Nm: # Apply the view method to S_D
             sk, Uk, VTk = TSVDrandEVENviewSubReuse(Amult, ATmult, ktrunc, ptrunc, VTkPrev.transpose(), qpow=qpow)
         else:  # Apply the randomize method to S_D Transposed
