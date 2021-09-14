@@ -25,8 +25,7 @@ subsurface simulator. The authors can make the experimental AUTOUGH2 executable 
 appropriate [TOUGH2](http://esd1.lbl.gov/research/projects/tough/) license.
 
 # Citation
-Bjarkason, E. K., Maclaren, O. J., O'Sullivan, J. P., and O'Sullivan, M. J. (2017). *Randomized truncated SVD Levenberg-Marquardt approach to geothermal natural state and history matching*. Water Resources Research, 54, 2376–2404. \\
-[https://doi.org/10.1002/2017WR021870](https://doi.org/10.1002/2017WR021870)
+Bjarkason, E. K., Maclaren, O. J., O'Sullivan, J. P., and O'Sullivan, M. J. (2017). *Randomized truncated SVD Levenberg-Marquardt approach to geothermal natural state and history matching*. Water Resources Research, 54, 2376–2404. [https://doi.org/10.1002/2017WR021870](https://doi.org/10.1002/2017WR021870)
 
 # Contact Authors
 Elvar K. Bjarkason: ebja558@aucklanduni.ac.nz
