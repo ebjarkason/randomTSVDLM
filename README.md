@@ -1,11 +1,11 @@
 # About randomTSVDLM
 Experimental Python code applying a randomized TSVD Levenberg-Marquardt (TSVD-LM) approach for inverting
 an AUTOUGH2 geothermal reservoir model. The code implements the randomized TSVD-LM approaches discussed
-in Bjarkason et al. (2017). 
+in (Bjarkason et al., 2018). 
 
-The Python script src/main.py runs the inversion experiments discussed in Bjarkason et al. (2017). 
-The TSVD-LM model updates can be found using the randomized methods outlined in Bjarkason et al. (2017) 
-to form an approximate TSVD of a dimensionless sensitivity matrix. 
+The Python script src/main.py runs the inversion experiments discussed in (Bjarkason et al., 2018). 
+The TSVD-LM model updates can be found using the randomized methods outlined in (Bjarkason et al., 2018),
+which apply an approximate TSVD of a dimensionless sensitivity matrix. 
 
 Note that the TSVD routines in src/evalTSVD.py can be run independently of the inversion and forward 
 simulation code. For estimating the TSVD of matrix *A*, the randomized TSVD routines just need to be supplied
